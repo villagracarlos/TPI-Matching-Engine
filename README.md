@@ -31,4 +31,4 @@ Licenciatura en Análisis de Sistemas
 
 ## 📄 Documentación
 
-- [Informe del proyecto](informe/Informe_Tecnico.pdf)
+- [Informe del proyecto](informe/Informe Tecnico.pdf)
