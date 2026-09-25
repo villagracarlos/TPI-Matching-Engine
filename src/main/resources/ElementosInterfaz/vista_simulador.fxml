@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import interfaz.MapaPanel?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://fxml.com/fxml"
+            fx:controller="ElementosInterfaz.Control">
+    
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #3A0887; -fx-padding: 15;">
+            <Label text="UVER 🍇" style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold; -fx-font-family: New Times Roman;"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnAsignar" text="SOLICITAR VIAJE" onAction="#handleAsignar" 
+                    style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+            <Button fx:id="btnSimularTodos" text="SIMULAR TODO" onAction="#handleSimularTodos"
+                    style="-fx-background-color: #e7cb3c; -fx-text-fill: white; -fx-font-weight: bold;"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fx:id="scrollMapa" pannable="true" fitToWidth="false" fitToHeight="false" prefViewportWidth="800" prefViewportHeight="800">
+            <content>
+                <MapaPanel fx:id="mapaPanel"/>
+            </content>
+        </ScrollPane>
+    </center>
+
+    <right>
+        <VBox spacing="5" prefWidth="250" style="-fx-padding: 10; -fx-background-color: #240231;">
+            <Label text="USUARIO" alignment="CENTER" style="-fx-font-weight: bold; -fx-text-fill: white"/>
+            <ComboBox fx:id="cboUsuarios" promptText="SELECCIONAR USUARIO" />
+
+            <Label text="DESTINO" alignment="CENTER" style="-fx-font-weight: bold; -fx-text-fill: white"/>
+            <ComboBox fx:id="cboDestinos" promptText="SELECCIONAR DESTINO" />
+
+            <Label text="VEHÍCULOS DISPONIBLES" style="-fx-font-weight: bold; -fx-text-fill: white"/>
+            <ListView fx:id="lstTaxisVisual" VBox.vgrow="ALWAYS" />
+
+            <Button fx:id="btnNuevoUsuario" text="Nuevo Usuario" onAction="#handleNuevoUsuario"/>
+            <TextArea fx:id="txtEntrada" prefHeight="200"/>
+
+            <Button fx:id="btnReiniciar" text="REINICIAR SIMULACIÓN" onAction="#handleReiniciar"/>
+        </VBox>
+    </right>
+    
+</BorderPane>

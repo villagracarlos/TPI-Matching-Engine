@@ -1,0 +1,10 @@
+.github
+.idea
+.vscode
+bin
+informe
+lib
+pom.xml
+presentacion
+src
+target
