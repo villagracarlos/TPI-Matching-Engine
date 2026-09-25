@@ -28,7 +28,3 @@ El proyecto consiste en un simulador de viajes en taxi basado en un **grafo diri
 **Algoritmos y Estructuras de Datos**  
 Universidad Nacional de Salta  
 Licenciatura en Análisis de Sistemas
-
-## 📄 Documentación
-
-- [Informe del proyecto](informe/Informe Tecnico.pdf)
